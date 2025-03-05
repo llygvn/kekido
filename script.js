@@ -53,3 +53,5 @@
             dot.addEventListener('click', () => moveCarousel(i));
         });
         
+
+        

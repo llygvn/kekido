@@ -7,7 +7,7 @@
 
 .announcement{
     background-color: #FB983C;
-    width: 100vw;
+    width: auto;
     text-align: center;
     padding: 10px 0;
     color: white;
@@ -190,7 +190,7 @@ header {
 
 
 .best-selling {
-  padding: 150px 250px;
+  padding: 200px 250px;
 }
 
 .best-selling h2 {
@@ -238,6 +238,12 @@ header {
   transition: transform 0.5s ease-in-out;
 }
 
+.product-card a {
+  text-decoration: none; 
+  color: inherit; 
+  display: block;
+}
+
 .product-card {
   background: #fff;
   border-radius: 12px;
@@ -281,7 +287,6 @@ header {
 .price {
   display: flex;
   justify-content: space-between; 
-  align-items: center; 
   width: 100%; 
 }
 
@@ -355,10 +360,315 @@ header {
   background: #6E5139;
 }
 
+.collections {
+  font-family: "SF Pro Text";
+  padding: 0px 250px;
+  margin-top: -6.7%;
+}
 
+.collections h2 {
+  color: #6E5139;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 2.38px;
+  margin-bottom: 50px;
+}
 
+.grid-container {
+  display: grid;
+  gap: 20px;
+  justify-content: left;
+  align-items: center;
+}
 
+.category {
+  display: flex;
+  flex-direction: column;
+}
 
+.category-tt {
+  text-align: left;
+  font-family: "SF Pro Text";
+  font-size: 24px;
+  font-weight: 800;
+  color: #6E5139;
+  padding: 25px 0px 0px;
+  transition: color 0.3s ease-in-out;
+}
+
+.category span, .category-large span {
+  font-weight: 100;
+}
+
+.category-large img {
+  width: 680px;
+  height: 644px;
+  border-radius: 20px;
+  border: 2px solid #6E5139;
+}
+
+.category img {
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  border: 2px solid #6E5139;
+}
+
+.category a, .category-large a{
+  text-decoration: none;
+}
+
+.category:hover img, .category-large:hover img {
+  transform: scale(0.97);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.2s ease-in-out;
+}
+
+.category:hover .category-tt, .category-large:hover .category-tt {
+  color: #FB983C;
+}
+
+/* Bread at the top-left */
+.category:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Pastries at the bottom-left */
+.category:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Cake spans both rows on the right */
+.category-large {
+  grid-column: 2;
+  grid-row: span 2;
+}
+
+footer {
+  height: 496px;
+  width: auto;
+  background: #FB983C;
+  margin-top: 200px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-left img {
+  padding: 110px 10px;
+}
+
+.links {
+  display: flex;
+  gap: 60px;
+}
+
+.links h3 {
+  color: #FFF;
+  font-family: "SF Pro Text";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links ul li {
+  margin-top: 23px;
+}
+
+.links ul li a {
+  text-decoration: none;
+  color: #FFF;
+  font-family: "SF Pro Text";
+  font-size: 22px;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.links ul li a:hover {
+  color: #6E5139;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.icons {
+  margin-bottom: 10px;
+  margin-top: -1%;
+}
+
+.icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icons a:hover {
+  transform: scale(1.1);
+}
+
+hr {
+  border: none;
+  height: 0.5px;
+  background-color: #FFF; /* Change color */
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  color: #FFF;
+  font-family: "SF Pro Text";
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 1.5px;
+  margin-top: 1.7%;
+}
+
+.cake-section h2 {
+  color: #6E5139;
+  font-family: "SF Pro Text";
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 1.02px;
+  padding: 0px 250px;
+  padding-top: 90px;
+}
+
+.cake-section p {
+  color: #6E5139;
+  font-family: "SF Pro Text";
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.84px;
+  margin-left: 250px;
+  padding-top: 90px;
+}
+
+.custom-box {
+  width: 1080px;
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid #6E5139;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 30px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.create-btn {
+  width: 82px;
+  height: 82px;
+  background-color: #F7933D;
+  color: white;
+  font-size: 62px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 82px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+.placeholder {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: left;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  margin: auto;
+}
+
+.placeholder:hover {
+    transform: translateY(-10px); /* Moves the card up by 10px */
+    transition: transform 0.2s ease-in-out;
+}
+
+.placeholder img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  font-family: "SF Pro Text";
+  color: #0A0A0A;
+  letter-spacing: 1.19px;
+  margin-top: 10px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.price p {
+  color: #FB983C;
+  font-family: "SF Pro Text";
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.atc-btn {
+  background: #FB983C;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.atc-btn:hover {
+  background-color: #FB983C;
+}
 
 @keyframes popShake {
   0% { transform: scale(1); }
@@ -371,6 +681,15 @@ header {
 .add-to-cart:active {
   animation: popShake 0.4s ease-out;
 }
+
+.create-btn:active {
+  animation: popShake 0.4s ease-out;
+}
+
+.atc-btn:active {
+  animation: popShake 0.4s ease-out;
+}
+
 
 
 
