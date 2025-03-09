@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Custom Cake Order - Kekido Japanese Bakery & Cake Shop </title>
+</head>
+<body>
+    
+    <div class="announcement" id="discount">Get ₱100 OFF your total bill for every ₱1,000 purchase!</div>
+    
+    <header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <button class="search-icon">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="#6E5139" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M22 22L20 20" stroke="#6E5139" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </button>
+        </div>
+
+        <div class="nav-center">
+            <a href="index.html"><img src="pics/logo.png" alt="kekido logo" class="logo" /></a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <button class="dropbtn"> All Products <i class="fa fa-caret-down"></i></button>
+                <ul class="dropdown-content">
+                    <li><a href="bread.html">Bread</a></li>
+                    <li><a href="cakes.html">Cakes</a></li>
+                    <li><a href="pastry.html">Pastries</a></li>
+                </ul>
+            </li>
+            <li><a href="FAQs.html">FAQs</a></li>
+            <li><a href="About-us.html">About Us</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button class="icon-btn" alt="User">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Iconly/Curved/Profile"> <g id="Profile"> <path id="Stroke 1" fill-rule="evenodd" clip-rule="evenodd" d="M11.8445 21.6618C8.15273 21.6618 5 21.0873 5 18.7865C5 16.4858 8.13273 14.3618 11.8445 14.3618C15.5364 14.3618 18.6891 16.4652 18.6891 18.766C18.6891 21.0658 15.5564 21.6618 11.8445 21.6618Z" stroke="#6E5139" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path id="Stroke 3" fill-rule="evenodd" clip-rule="evenodd" d="M11.8372 11.1735C14.26 11.1735 16.2236 9.2099 16.2236 6.78718C16.2236 4.36445 14.26 2.3999 11.8372 2.3999C9.41452 2.3999 7.44998 4.36445 7.44998 6.78718C7.4418 9.20172 9.3918 11.1654 11.8063 11.1735C11.8172 11.1735 11.8272 11.1735 11.8372 11.1735Z" stroke="#6E5139" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g> </g></svg>
+            </button>
+            <button class="icon-btn" alt="Cart">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#6E5139" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </button>
+        </div>
+    </nav>
+    </header>
+
+    <section class="custom-order">
+        <h2>Custom Birthday Cake</h2>
+        <form action="#" method="POST">
+            <!-- Size -->
+            <label for="size">Size:</label>
+            <select id="size" name="size">
+                <option value="6">6" (+₱2,000)</option>
+                <option value="8" selected>8" (+₱2,600)</option>
+                <option value="10">10" (+₱3,950)</option>
+            </select>
+
+            <!-- Tiers -->
+            <label>Tiers:</label>
+            <div class="tiers">
+                <label for="single" class="tier-label">
+                    <input type="radio" id="single" name="tiers" value="Single" checked>
+                    <img src="pics/single-tier.png" alt="Single">
+                    <span class="single">Single (Base Price)</span>
+                </label>
+            
+                <label for="double" class="tier-label">
+                    <input type="radio" id="double" name="tiers" value="Double">
+                    <img src="pics/double-tier.png" alt="Double">
+                    <span>Double (+₱1,500)</span>
+                </label>
+            
+                <label for="multi" class="tier-label">
+                    <input type="radio" id="multi" name="tiers" value="Multi">
+                    <img src="pics/multi.png" alt="Multi">
+                    <span>Multi (+₱3,000)</span>
+                </label>
+            </div>
+
+            <!-- Layers -->
+            <label for="layers">Layers:</label>
+            <select id="layers" name="layers">
+                <option value="2" selected>Standard (2 layers per tier)</option>
+                <option value="3">Tall (3 layers per tier) (+₱400 per tier)</option>
+                <option value="4"> Extra Tall (4 layers per tier) (+₱800 per tier)</option>
+            </select>
+
+            <!-- Cake Type -->
+            <label>Cake Type:</label>
+            <div class="radio-group">
+                <input type="radio" id="sponge" name="cakeType" value="Sponge" checked>
+                <label for="sponge">Sponge</label>
+
+                <input type="radio" id="chiffon" name="cakeType" value="Chiffon">
+                <label for="chiffon">Chiffon</label>
+
+                <input type="radio" id="butter" name="cakeType" value="Butter">
+                <label for="butter">Buttercream</label>
+            </div>
+
+            <!-- Cake Flavor -->
+            <label for="flavor">Cake Flavor:</label>
+            <select id="flavor" name="flavor">
+                <option value="chocolate">Chocolate (Base Price)</option>
+                <option value="red-velvet" selected>Red Velvet (+₱300)</option>
+                <option value="vanilla">Vanilla (Base Price)</option>
+                <option value="ube">Ube (+₱200)</option>
+                <option value="carrot">Carrot (+₱250)</option>
+
+            </select>
+
+            <!-- Frosting -->
+            <label for="frosting">Frosting:</label>
+            <select id="frosting" name="frosting">
+                <option value="whipped-cream" selected>Whipped Cream (Base Price)</option>
+                <option value="buttercream">Buttercream (+₱200)</option>
+                <option value="cream-cheese">Cream Cheese (+₱300)</option>
+            </select>
+
+            <!-- Fillings -->
+            <label for="fillings">Fillings:</label>
+            <select id="fillings" name="fillings">
+                <option value="none">None</option>
+                <option value="cream-cheese" selected>Cream Cheese (+₱200)</option>
+                <option value="ganache">Ganache (depends on cake flavor) (+₱250)</option>
+                <option value="whipped-cream">Whipped Cream (Base Price)</option>
+                <option value="fruits">Fruits (+₱300)</option>
+            </select>
+
+            <!-- Dedication -->
+            <label for="dedication">Dedication:</label>
+            <textarea id="dedication" name="dedication" rows="3" placeholder="Enter a message..."></textarea>
+    
+            <label for="special-instructions">Special Instructions:</label>
+            <textarea id="special-instructions" name="special-instructions" rows="3" placeholder="Enter a message..."></textarea>
+    
+            <!-- Add-ons -->
+            <label for="addons">Add-ons:</label>
+            <select id="addons" name="addons">
+                <option value="none">None</option>
+                <option value="candle">Candle (Free)</option>
+                <option value="topper">Cake Topper (+₱50)</option>
+                <option value="candle-topper">Candle (Free) + Cake Topper (+₱50)</option>
+
+            </select>
+    
+            <!-- File Upload -->
+            <label for="fileUpload">Sample Reference:</label>
+            <div class="upload-box">
+                <input type="file" id="file" name="file" accept="image/*">
+                <div class="upload-content">
+                    <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M220.5 245.4c-32.8 32.8-55.1 73.2-65.2 117.3h16.5c18.8-75.3 75.1-135.9 148-160.7v-16.9c-37.1 11.6-71 32-99.3 60.3z" fill="#21212112121"></path><path d="M959.9 540.8c0 113.6-92.1 205.8-205.7 205.9H590.9v-44h163.3c43.2 0 83.8-16.9 114.3-47.4 30.6-30.6 47.4-71.2 47.4-114.5 0-43.2-16.8-83.9-47.4-114.4S797.2 379 754 379c-11.5 0-22.8 1.2-33.8 3.5-15 3.2-29.4 8.4-42.8 15.7-1-15.4-3.3-30.7-6.8-45.6v-0.1c-3.6-15.6-8.6-30.8-14.9-45.7-14.4-33.9-34.9-64.4-61.1-90.6-26.2-26.2-56.6-46.7-90.6-61.1-35.1-14.8-72.4-22.4-110.9-22.4s-75.8 7.5-110.9 22.4c-33.9 14.3-64.4 34.9-90.6 61.1-26.2 26.2-46.7 56.7-61.1 90.6-14.9 35.1-22.4 72.4-22.4 110.9s7.5 75.8 22.4 110.9c14.3 33.9 34.9 64.4 61.1 90.6 26.2 26.2 56.7 46.7 90.6 61.1 35.1 14.8 72.4 22.4 110.9 22.4h39.7v44h-41C210.7 746 64.1 599 64.1 417.7c0-181.7 147.3-329 329-329 154.6 0 284.3 106.6 319.5 250.3v0.1c13.4-2.7 27.2-4.2 41.4-4.2 113.7 0.1 205.9 92.2 205.9 205.9z" fill="#212121"></path><path d="M692.9 636.1h-22.6L519.8 485.6v449.6h-16V485.8L353.4 636.1h-22.6l181-181z" fill="#21212112121"></path></g></svg>
+                    <p class="upload-text">Upload a File</p>
+                    <p class="upload-subtext">Drag and Drop or Click here <br>to upload image</p>
+                </div>
+            </div>
+    
+            <!-- Submit Button -->
+            <button type="submit" class="cart-button">Add to Cart</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="pics/sec-logo.png" alt="">
+            </div>
+            <div class="links">
+                <div class="shop-links">
+                    <h3>Shop Links</h3>
+                    <ul>
+                        <li><a href="bread.html">Bread</a></li>
+                        <li><a href="pastry.html">Pastries</a></li>
+                        <li><a href="cakes.html">Cakes</a></li>
+                    </ul>
+                </div>
+                <div class="quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="About-us.html">About Us</a></li>
+                        <li><a href="FAQs.html">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <hr>
+            <p>© 2025, Kekido Japanese Bakery and Cake Shop.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
