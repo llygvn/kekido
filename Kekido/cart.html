@@ -8,25 +8,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Cakes - Kekido Japanese Bakery & Cake Shop</title>
+    <title>Frequently Asked Questions - Kekido Japanese Bakery & Cake Shop</title>
 </head>
 <body>
     
     <div class="announcement" id="discount">Get ₱100 OFF your total bill for every ₱1,000 purchase!</div>
     
-    <div id="cart-notification" class="cart-notification">
-        <div class="cart-header">
-            <span class="checkmark">✔</span>
-            <p>Item added to your cart</p>
-        </div>
-        <div class="cart-item">
-            <img id="cart-item-img" src="" alt="">
-            <span id="cart-item-name" class="cart-item-details"></span>
-        </div>
-    </div>
-
-    <div id="cart-full-toast">🛒 Your cart is full! You cannot add more than 99 items.</div>
-
     <header>
     <nav class="navbar">
         <div class="nav-left">
@@ -57,107 +44,37 @@
             <button class="icon-btn" alt="User">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Iconly/Curved/Profile"> <g id="Profile"> <path id="Stroke 1" fill-rule="evenodd" clip-rule="evenodd" d="M11.8445 21.6618C8.15273 21.6618 5 21.0873 5 18.7865C5 16.4858 8.13273 14.3618 11.8445 14.3618C15.5364 14.3618 18.6891 16.4652 18.6891 18.766C18.6891 21.0658 15.5564 21.6618 11.8445 21.6618Z" stroke="#6E5139" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path id="Stroke 3" fill-rule="evenodd" clip-rule="evenodd" d="M11.8372 11.1735C14.26 11.1735 16.2236 9.2099 16.2236 6.78718C16.2236 4.36445 14.26 2.3999 11.8372 2.3999C9.41452 2.3999 7.44998 4.36445 7.44998 6.78718C7.4418 9.20172 9.3918 11.1654 11.8063 11.1735C11.8172 11.1735 11.8272 11.1735 11.8372 11.1735Z" stroke="#6E5139" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g> </g></svg>
             </button>
-            <a href="cart.html"><button class="icon-btn" alt="Cart">
+            <button class="icon-btn" alt="Cart">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#6E5139" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                 <span id="cart-count">0</span>
-            </button></a>
+            </button>
         </div>
     </nav>
     </header>
 
-    <section class="cake-section">
-        <h2>Cakes</h2>
-        <p>Customize your cake!</p>
-        <div class="custom-box">
-        <a href="custom.html"><div class="create-btn">+</div></a>
-        </div>
-        <p>Pre-made Cakes</p>
-    </section>
+    <main class="cart-container">
+        <h1>Your Cart</h1>
+        <a href="index.html" class="continue-shopping">Continue shopping</a>
 
-    <section>
-    <div class="product">
-        <div class="product-card">
-            <a href="#"><img src="pics/biscoff-cc.png" alt="Biscoff Cheesecake"></a>
-            <h3>Biscoff Cheesecake</h3>
-            <div class="price">
-                <p>From ₱1,299</p>
-                <button class="add-to-cart">+</button>
-            </div>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <h3>Subtotal <span id="cart-subtotal">₱0.00</span></h3>
+            <button id="checkout-button">Checkout</button>
         </div>
-        <div class="product-card">
-            <a href="#"><img src="pics/Chocolate-Strawberry-swiss-roll.png" alt="Midnight Berry Swiss Roll"></a>
-            <h3>Midnight Berry Swiss Roll</h3>
-            <div class="price">
-                <p>From ₱475</p>
-                <button class="add-to-cart">+</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <a href="#"><img src="pics/royal.png" alt="Choco Mini Cakes"></a>
-            <h3>Choco Royal Mini Cake</h3>
-            <div class="price">
-                <p>₱95</p>
-                <button class="add-to-cart">+</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <a href="#"><img src="pics/mango-mousse.png" alt="Choco Mini Cakes"></a>
-            <h3>Creamy Mango Mousse Cake</h3>
-            <div class="price">
-                <p>From ₱1,200</p>
-                <button class="add-to-cart">+</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <a href="#"><img src="pics/choco-overload.png" alt="Choco Mini Cakes"></a>
-            <h3>Choco Overload</h3>
-            <div class="price">
-                <p>From ₱1,375</p>
-                <button class="add-to-cart">+</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <a href="#"><img src="pics/matcha-berry.png" alt="Choco Mini Cakes"></a>
-            <h3>Matcha Berry Delight</h3>
-            <div class="price">
-                <p>From ₱1,200</p>
-                <button class="add-to-cart">+</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <a href="#"><img src="pics/ube-royale.png" alt="Choco Mini Cakes"></a>
-            <h3>Ube Royale Swiss Roll</h3>
-            <div class="price">
-                <p>From ₱425</p>
-                <button class="add-to-cart">+</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <a href="#"><img src="pics/bb-cc.png" alt="Choco Mini Cakes"></a>
-            <h3>Blueberry Cheesecake</h3>
-            <div class="price">
-                <p>₱75</p>
-                <button class="add-to-cart">+</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <a href="#"><img src="pics/straw-cc.png" alt="Choco Mini Cakes"></a>
-            <h3>Strawberry Shortcake</h3>
-            <div class="price">
-                <p>₱1,499</p>
-                <button class="add-to-cart">+</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <a href="#"><img src="pics/tiramisu.png" alt="Cinnamon Rolls"></a>
-            <h3>Classic Tiramisu</h3>
-            <div class="price">
-                <p>₱180</p>
-                <button class="add-to-cart">+</button>
-            </div>
-        </div>
-    </div>
-    </section>
+    </main>
+    
 
     <footer>
         <div class="footer-container">
@@ -192,9 +109,9 @@
             <p>© 2025, Kekido Japanese Bakery and Cake Shop.</p>
         </div>
     </footer>
-    
-    <script src="script.js"></script>
-    <script src="add-to-cart.js"></script>
+
     <script src="cart.js"></script>
+    <script src="add-to-cart.js"></script>
+
 </body>
 </html>

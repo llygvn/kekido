@@ -24,49 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const parent = this.parentNode;
             const answer = parent.querySelector("p");
 
-            // Toggle only the clicked FAQ
             parent.classList.toggle("active");
 
             if (parent.classList.contains("active")) {
-                answer.style.maxHeight = answer.scrollHeight + "px"; // Expand
+                answer.style.maxHeight = answer.scrollHeight + "px";
             } else {
-                answer.style.maxHeight = null; // Collapse
+                answer.style.maxHeight = null;
             }
         });
     });
-
-    // 🔹 Product Carousel Logic
-    let currentIndex = 0;
-    const carousel = document.querySelector('.product-container');
-
-    if (carousel) {
-        const cardWidth = 220;
-        const totalCards = carousel.children.length;
-        const visibleCards = 3;
-        const maxIndex = totalCards - visibleCards;
-
-        function moveCarousel(index) {
-            if (index < 0) index = 0;
-            else if (index > maxIndex) index = maxIndex;
-
-            currentIndex = index;
-            const offset = index * cardWidth * -1;
-            carousel.style.transform = `translateX(${offset}px)`;
-
-            document.querySelectorAll('.dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-        }
-
-        const leftArrow = document.querySelector('.arrow.left');
-        const rightArrow = document.querySelector('.arrow.right');
-        const dots = document.querySelectorAll('.dot');
-
-        if (leftArrow) leftArrow.addEventListener('click', () => { if (currentIndex > 0) moveCarousel(currentIndex - 1); });
-        if (rightArrow) rightArrow.addEventListener('click', () => { moveCarousel(currentIndex + 1); });
-
-        dots.forEach((dot, i) => {
-            dot.addEventListener('click', () => moveCarousel(i));
-        });
-    }
 });
