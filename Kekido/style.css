@@ -1058,7 +1058,7 @@ textarea {
 
 /*CART PAGEEEE*/
 .cart-container {
-  width: 80%;
+  width: 68%;
   margin: 40px auto;
   background: white;
   padding: 20px;
@@ -1066,16 +1066,48 @@ textarea {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-size: 24px;
+h2 {
+  font-size: 34px;
+  font-family: "SF Pro Text";
+  color: #6E5139;
 }
 
 .continue-shopping {
   float: right;
-  font-size: 14px;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+  color: #6E5139;
+  font-family: "SF Pro Text";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.91px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.cart-summary h3{
+  color: #000;
+  font-family: "SF Pro Text";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.19px;
+}
+
+#cart-subtotal{
+  color: #FB983C;
+  font-family: "SF Pro Text";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.19px;
+  margin-left: 10px;
 }
 
 .cart-table {
@@ -1091,7 +1123,18 @@ h1 {
 }
 
 .cart-table th {
-  font-weight: bold;
+  color: rgba(110, 81, 57, 0.60);
+  font-family: "SF Pro Text";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+}
+
+#quantity, #total{
+  text-align: right;
 }
 
 .cart-table img {
@@ -1122,34 +1165,24 @@ h1 {
 
 .cart-summary {
   text-align: right;
-  margin-top: 20px;
+  margin-top: 130px;
 }
 
 #checkout-button {
-  background: orange;
+  background: #FB983C;
   color: white;
   padding: 10px 20px;
+  width: 221px;
+  height: 48px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
+  font-size: 17px;
+  border-radius: 40px;
+  margin-top: 30px;
+  font-weight: 800;
+  font-family: "SF Pro Text";
 }
 
-#checkout-button:hover {
-  background: darkorange;
-}
-
-.remove-btn {
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  color: #d9534f; /* Red color for delete */
-}
-
-.remove-btn:hover {
-  color: #c9302c;
-}
 
 
 
