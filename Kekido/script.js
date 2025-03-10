@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 🔹 Dropdown Menu Logic
+    // 🔹 All Products Dropdown Menu Logic
     const dropbtn = document.querySelector('.dropbtn');
     const dropdownContent = document.querySelector('.dropdown-content');
 
@@ -15,6 +15,29 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // 🔹 Availability & Price Filter Dropdowns
+    document.querySelectorAll(".dropthatdownformebaby").forEach(dropdown => {
+        const button = dropdown.querySelector(".dropbutton");
+        const menu = dropdown.querySelector("div");
+
+        if (button && menu) {
+            button.addEventListener("click", function (event) {
+                event.stopPropagation(); // Prevents dropdown from closing immediately
+                menu.classList.toggle("active");
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!menu.contains(event.target) && !button.contains(event.target)) {
+                    menu.classList.remove("active");
+                }
+            });
+
+            menu.addEventListener("click", function (event) {
+                event.stopPropagation(); // Prevents dropdown from closing when clicking inside
+            });
+        }
+    });
 
     // 🔹 FAQ Toggle Logic (Allows Multiple Open FAQs)
     const faqs = document.querySelectorAll(".faq-item h3");

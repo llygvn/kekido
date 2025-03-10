@@ -76,7 +76,7 @@ function updateCartCount() {
         cartCountElement.style.visibility = "hidden"; // Hide when no items
     } else {
         cartCountElement.style.visibility = "visible"; // Show when > 0
-        cartCountElement.innerText = count > 99 ? "99" : count; // Limit to "99+"
+        cartCountElement.innerText = count > 999 ? "99" : count; // Limit to "99+"
     }
 }
 

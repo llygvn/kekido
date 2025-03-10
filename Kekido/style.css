@@ -1034,7 +1034,6 @@ textarea {
   height: 50px;
   border-radius: 5px;
   object-fit: cover;
-  border: 1px solid #ddd;
 }
 
 /* Product name */
@@ -1185,7 +1184,77 @@ h2 {
 
 
 
+.filters {
+  display: flex;
+  gap: 560px;
+  margin-top: 30px;
+ 
+}
 
+.dropthatdownformebaby {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbutton {
+  background-color: white;
+  color: #6E5139;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-left: 237px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.dp-price {
+  background-color: white;
+  color: #6E5139;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-left: 297px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.dropdwn-cntnt {
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 242px;
+  background-color: #fff;
+  min-width: 190px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  border-radius: 12px;
+  z-index: 100;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+
+.dropdwn-cntnt a {
+  color: #6E5139;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdwn-cntnt a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropthatdownformebaby:hover .dropdwn-cntnt {
+  display: block;
+}
+
+.bread-section h2 {
+  color: #6E5139;
+  font-family: "SF Pro Text";
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 1.02px;
+  padding: 0px 250px;
+  padding-top: 90px;
+}
 
 
 
