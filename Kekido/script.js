@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // 🔹 Availability & Price Filter Dropdowns
     document.querySelectorAll(".dropthatdownformebaby").forEach(dropdown => {
         const button = dropdown.querySelector(".dropbutton");
         const menu = dropdown.querySelector("div");
@@ -39,7 +38,58 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 🔹 FAQ Toggle Logic (Allows Multiple Open FAQs)
+    
+   // PRICE FILTER
+const priceSortOptions = document.querySelectorAll(".price-sort-option");
+
+let productContainer = document.querySelector(".product-container") || document.querySelector(".bread-container");
+
+// Detect products dynamically
+let products = Array.from(document.querySelectorAll(".product-card")) || Array.from(document.querySelectorAll(".bread-card"));
+
+console.log("🔍 Detected Container:", productContainer);
+console.log("🔍 Detected Products:", products);
+
+if (!productContainer || products.length === 0) {
+    console.error("❌ ERROR: Elements not found. Check class names in HTML!");
+    return;
+}
+
+// Sorting functionality
+priceSortOptions.forEach(option => {
+    option.addEventListener("click", function (event) {
+        event.preventDefault(); 
+
+        console.log("🔄 Sorting triggered:", this.dataset.sort);
+
+        let sortedProducts = [...products]; // Copy array before sorting
+        sortedProducts.sort((a, b) => {
+            return this.dataset.sort === "low-to-high"
+                ? getPrice(a) - getPrice(b)
+                : getPrice(b) - getPrice(a);
+        });
+
+        console.log("✅ Sorted Prices:", sortedProducts.map(p => getPrice(p)));
+
+        // Reorder products inside the container
+        sortedProducts.forEach(product => productContainer.appendChild(product));
+    });
+});
+
+// Function to extract price from product elements
+function getPrice(product) {
+    let priceElement = product.querySelector(".product-price"); // Standardized price selector
+    if (!priceElement) return 0; // Prevent errors
+
+    let priceText = priceElement.textContent.replace(/[^\d.]/g, "").trim(); // Remove non-numeric characters
+    let price = parseFloat(priceText);
+
+    console.log(`💰 Extracted Price for ${product.className}:`, price);
+    return isNaN(price) ? 0 : price;
+}
+
+
+    // FAQs
     const faqs = document.querySelectorAll(".faq-item h3");
 
     faqs.forEach((faq) => {

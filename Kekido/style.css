@@ -189,10 +189,6 @@ header {
 }
 
 
-.best-selling {
-  padding: 200px 250px;
-}
-
 .best-selling h2 {
   color: #6E5139;
   font-family: "SF Pro Text";
@@ -201,6 +197,8 @@ header {
   font-weight: 800;
   line-height: normal;
   letter-spacing: 2.38px;
+  margin-left: 250px;
+  margin-top: 210px;
 }
 
 .best-selling h2 .line {
@@ -221,21 +219,6 @@ header {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1.54px;
-}
-
-.carousel-container {
-  width: 100%;
-  overflow: hidden; 
-  position: relative;
-}
-
-.product-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: nowrap;
-  padding: 37px 0px;
-  transition: transform 0.5s ease-in-out;
 }
 
 .product-card a {
@@ -316,61 +299,10 @@ header {
   background: #FB983C;
 }
 
-.carousel-navigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px; 
-  margin-top: 15px;
-}
-
-.arrow {
-  background: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-  margin-top: -40px;
-}
-
-.arrow .icon {
-  width: 15px; 
-  height: 15px;
-  fill: #6E5139;
-}
-
-.arrow:hover .icon {
-  fill: #a56c2e; 
-}
-
-.dots {
-  margin-top: -40px;
-  display: flex;
-  justify-content: center;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background: #ccc;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.dot.active {
-  background: #6E5139;
-}
-
 .collections {
   font-family: "SF Pro Text";
   padding: 0px 250px;
-  margin-top: -6.7%;
+  margin-top: 90px;
 }
 
 .collections h2 {
@@ -602,7 +534,7 @@ hr {
     text-decoration: none;
 }
 
-.product {
+.product-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, auto);
@@ -1257,9 +1189,95 @@ h2 {
 }
 
 
+#about-us {
+  min-height: auto;
+  background-color: #ffffff;
+  text-align: center;
+}
 
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
 
+.about-text {
+  flex: 1;
+  text-align: left;
+}
 
+.about-text h2 {
+  font-size: 34px;
+  color: #6E5139;
+  margin-bottom: 20px;
+  font-family: "SF Pro Text";
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  color: #212121;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-family: "SF Pro Text";
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-section {
+  margin-top: 50px;
+}
+
+.team-section h2 {
+  font-size: 34px;
+  color: #6E5139;;
+  margin-bottom: 40px;
+  font-family: "SF Pro Text";
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #777;
+}
+
+#about-us{
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 68px;
+}
 
 
 
